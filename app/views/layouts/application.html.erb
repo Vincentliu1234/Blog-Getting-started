@@ -7,7 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= link_to "Home", root_path %>
+|   
+<%= link_to("About", about_path, class: "header-link") %>
+<hr>
+<%= flash[:notice] || flash[:alert] %>
+<hr>
 <%= yield %>
 
 </body>
